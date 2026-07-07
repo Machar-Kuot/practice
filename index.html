@@ -3,94 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOKIO</title>
+    <title>BOOKIO | Your Online Book Shop</title>
 
+    <!-- Google Fonts: serif for headings, sans for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- External CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- HEADER:-->
-    <header>
-        <div class="logo">
-            <h1>BOOKIO</h1>
+    <!-- ===================== HEADER (Semantic Element #1) ===================== -->
+    <header class="site-header">
+        <div class="logo-area">
+            <span class="logo-mark">📖</span>
+            <h1 class="logo-text">BOOKIO</h1>
         </div>
-        
-        <!-- NAV:  -->
-        <nav>
+
+        <!-- ===================== NAV (Semantic Element #2) ===================== -->
+        <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#fiction">Fiction</a></li>
-                <li><a href="#non-fiction">Non-Fiction</a></li>
-                <li><a href="#cart">Cart (0)</a></li>
+                <li><a href="#featured">Featured Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#order-form">Order / Register</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- MAIN:-->
+    <!-- ===================== MAIN (Semantic Element #3) ===================== -->
     <main>
 
-        <!-- SECTION: (Featured Books) -->
-        <section id="featured-books">
-            <h2>Featured Best-Sellers</h2>
-
-            <!-- ARTICLE:-->
-            <article class="book-card">
-                <img src="Theart.jpg" alt="The Art of Being Alone Book Cover">
-                <h3>THE ART OF BEING ALONE</h3>
-                <p class="author">By Renuka Gavrani</p>
-                <p class="price">$14.99</p>
-                <button>Add to Cart</button>
-            </article>
-
-            <!-- ARTICLE: -->
-            <article class="book-card">
-                <img src="Thefault.jpg" alt="HTML and CSS Design Book Cover">
-                <h3>THE FAULT IN OUR STARS</h3>
-                <p class="author">By John Green.</p>
-                <p class="price">$12.87</p>
-                <button>Add to Cart</button>
-            </article>
-
-            <!-- ARTICLE:-->
-            <article class="book-card">
-                <img src="Laziness.jpg" alt="The Art of Being Alone Book Cover">
-                <h3>THE ART OF LAZINESS</h3>
-                <p class="author">By Library Mindset</p>
-                <p class="price">$14.99</p>
-                <button>Add to Cart</button>
-            </article>
-
-            <!-- ARTICLE: -->
-            <article class="book-card">
-                <img src="Atomic.jpg" alt="HTML and CSS Design Book Cover">
-                <h3>ATOMIC HABITS</h3>
-                <p class="author">James Clear.</p>
-                <p class="price">$12.87</p>
-                <button>Add to Cart</button>
-            </article>
-
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="eyebrow">Turning pages, one click at a time</p>
+                <h2>Every story you love, delivered to your door.</h2>
+                <p>BOOKIO is a cozy corner of the internet for readers — browse bestsellers, hidden gems, and everything in between.</p>
+                <a href="#order-form" class="btn btn-primary">Start Shopping</a>
+            </div>
         </section>
 
-        <!-- ASIDE: -->
-        <aside class="sidebar">
-            <div class="promo-box">
-                <h3> Limited Offer!</h3>
-                <p>Get 10% off your first order with code: <strong>READ10</strong></p>
+        <!-- ===================== SECTION (Semantic Element #4) ===================== -->
+        <section class="featured-books" id="featured">
+            <h2 class="section-title">Featured Books</h2>
+
+            <div class="book-grid">
+
+                <!-- ===================== ARTICLE (Semantic Element #5) ===================== -->
+                <article class="book-card" id="book-1">
+                    <!-- ===================== FIGURE (Semantic Element #6) ===================== -->
+                    <figure class="book-cover">
+                        <img src="https://covers.openlibrary.org/b/id/8231856-M.jpg" alt="Cover of Pride and Prejudice">
+                        <!-- ===================== FIGCAPTION (Semantic Element #7) ===================== -->
+                        <figcaption>Pride and Prejudice</figcaption>
+                    </figure>
+                    <h3>Pride and Prejudice</h3>
+                    <p class="author">Jane Austen</p>
+                    <p class="price">$8.99</p>
+                </article>
+
+                <article class="book-card" id="book-2">
+                    <figure class="book-cover">
+                        <img src="https://covers.openlibrary.org/b/id/8474227-M.jpg" alt="Cover of The Hobbit">
+                        <figcaption>The Hobbit</figcaption>
+                    </figure>
+                    <h3>The Hobbit</h3>
+                    <p class="author">J.R.R. Tolkien</p>
+                    <p class="price">$10.50</p>
+                </article>
+
+                <article class="book-card" id="book-3">
+                    <figure class="book-cover">
+                        <img src="https://covers.openlibrary.org/b/id/8155305-M.jpg" alt="Cover of 1984">
+                        <figcaption>1984</figcaption>
+                    </figure>
+                    <h3>1984</h3>
+                    <p class="author">George Orwell</p>
+                    <p class="price">$7.25</p>
+                </article>
+
             </div>
-            
-            <div class="store-hours">
-                <h3>Store Hours</h3>
-                <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
-                <p>Sunday: Closed</p>
-            </div>
+        </section>
+
+        <!-- ===================== ASIDE (Semantic Element #8) ===================== -->
+        <aside class="librarian-note" id="about">
+            <h2>A Note from Our Librarian</h2>
+            <p>"We hand-pick every title on BOOKIO. Whether you want a rainy-day romance or a book that'll keep you up all night, we've probably already read it — and loved it."</p>
+            <p class="signature">— The BOOKIO Team</p>
         </aside>
+
+        <!-- ORDER / REGISTRATION FORM SECTION -->
+        <section class="order-section" id="order-form">
+            <h2 class="section-title">Order a Book / Join BOOKIO</h2>
+
+            <form class="bookio-form" id="bookio-form" action="#" method="post" enctype="multipart/form-data">
+
+                <!-- Search bar -->
+                <div class="form-group full-width">
+                    <label for="search-book">Search for a Book</label>
+                    <input type="search" id="search-book" name="search-book" placeholder="e.g. The Hobbit">
+                </div>
+
+                <!-- First name -->
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Jane" required>
+                </div>
+
+                <!-- Second / Last name -->
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" pattern="[0-9+\-\s]*">
+                </div>
+
+                <!-- Date -->
+                <div class="form-group">
+                    <label for="delivery-date">Preferred Delivery Date</label>
+                    <input type="date" id="delivery-date" name="delivery-date">
+                </div>
+
+                <!-- File attachment -->
+                <div class="form-group">
+                    <label for="attachment">Attach a File (e.g. gift note, receipt)</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+
+                <!-- Radio buttons -->
+                <fieldset class="form-group full-width">
+                    <legend>Preferred Format</legend>
+
+                    <label class="inline-label">
+                        <input type="radio" name="book-format" value="paperback" checked>
+                        Paperback
+                    </label>
+
+                    <label class="inline-label">
+                        <input type="radio" name="book-format" value="hardcover">
+                        Hardcover
+                    </label>
+
+                    <label class="inline-label">
+                        <input type="radio" name="book-format" value="ebook">
+                        E-Book
+                    </label>
+                </fieldset>
+
+                <!-- Checkbox -->
+                <div class="form-group full-width">
+                    <label class="inline-label">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        Subscribe me to the BOOKIO newsletter
+                    </label>
+                </div>
+
+                <!-- Submit button -->
+                <div class="form-group full-width">
+                    <button type="submit" class="btn btn-primary">Submit Order</button>
+                </div>
+
+            </form>
+        </section>
 
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 The Corner Bookshop.</p>
-        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    <!-- ===================== FOOTER (Semantic Element #9) ===================== -->
+    <footer class="site-footer" id="contact">
+        <p>&copy; <time datetime="2026">2026</time> BOOKIO. All rights reserved.</p>
+        <address>
+            123 Chapter Lane, Storyville &mdash;
+            <a href="mailto:hello@bookio.com">hello@bookio.com</a>
+        </address>
+        <!-- ===================== TIME (Semantic Element #10) ===================== -->
+        <p>Customer support hours: <time datetime="09:00">9:00 AM</time> &ndash; <time datetime="21:00">9:00 PM</time>, daily</p>
     </footer>
 
 </body>
